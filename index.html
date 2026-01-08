@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NEXTWIN — Next Generation. Next Win.</title>
+<meta name="description" content="NEXTWIN — AI & Education products. LearnX AI, EduMaster and more. Powered by Sanu Kumar." />
+<style>
+:root{
+  --bg:#0b0710;
+  --card:#1c172a;
+  --muted:#bdb7c9;
+  --accent:#7c3aed;
+  --accent-2:#2dd4bf;
+  --glass: rgba(255,255,255,0.06);
+  --glass-2: rgba(255,255,255,0.02);
+  --white:#ffffff;
+  --radius:16px;
+  --fw-regular:400; --fw-medium:600; --fw-bold:700;
+  --maxw:1200px;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;scroll-behavior:smooth;}
+body{
+  background: radial-gradient(circle at top left, #1a0e2b 0%, var(--bg) 100%);
+  color:var(--white);
+  padding:20px;
+  line-height:1.5;
+}
+.container{max-width:var(--maxw);margin:0 auto;}
+
+/* Header */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:12px 0;
+  background:rgba(11,7,16,0.85);
+  backdrop-filter:blur(12px);
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid var(--glass-2);
+  flex-wrap:wrap;
+}
+.brand{display:flex;gap:8px;align-items:center;}
+.logo{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#5b21b6);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(124,58,237,0.3);}
+.logo svg{width:28px;height:28px;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.7));}
+.brand h1{margin:0;font-size:20px;font-weight:700;}
+.brand p{margin:0;font-size:12px;color:var(--muted);}
+nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+.btn{padding:8px 14px;border-radius:12px;font-weight:600;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--white);cursor:pointer;transition:all 0.3s ease;}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#9b5cff);border:none;box-shadow:0 8px 30px rgba(124,58,237,0.15);}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);}
+
+/* Hero */
+.hero{display:flex;flex-wrap:wrap;gap:24px;padding:24px 0;align-items:center;justify-content:space-between;}
+.hero-left{flex:1;min-width:280px;max-width:640px;}
+.kicker{display:inline-block;background:linear-gradient(90deg,var(--accent-2),var(--accent));padding:4px 12px;border-radius:999px;font-weight:700;color:#061018;margin-bottom:12px;font-size:12px;}
+.hero-left h2{font-size:32px;margin:0 0 16px;line-height:1.2;}
+.hero-left p{color:var(--muted);margin:0 0 20px;font-size:15px;}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;}
+.stat{background:var(--glass);padding:10px 14px;border-radius:12px;text-align:center;backdrop-filter:blur(6px);}
+.stat b{display:block;font-size:16px;}
+
+/* Product Card */
+.hero-right{flex:1;min-width:280px;max-width:420px;}
+.product-card{background:var(--card);border-radius:16px;padding:18px;border:1px solid var(--glass-2);backdrop-filter:blur(12px);}
+.product-card h3{margin:0 0 6px;font-size:16px;}
+.product-card p{color:var(--muted);margin:0 0 10px;font-size:13px;}
+.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.mini{padding:8px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);border:1px solid rgba(255,255,255,0.02);font-size:12px;text-align:center;}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0;}
+.feature{background:var(--card);padding:16px;border-radius:12px;border:1px solid var(--glass);}
+.feature h4{margin:0 0 6px;font-size:14px;}
+.feature p{color:var(--muted);margin:0;font-size:13px;}
+
+/* Products */
+.products{display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
+.product{display:flex;align-items:center;gap:10px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.02);}
+.product .thumb{width:48px;height:48px;border-radius:8px;background:linear-gradient(180deg,var(--accent),#3b0a6f);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:14px;}
+
+/* Footer */
+footer{padding:16px 0;border-top:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--muted);font-size:12px;text-align:center;}
+
+/* Login Modal */
+#loginModal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;z-index:999;display:none;}
+#loginModal .modal-content{background:var(--card);padding:24px;border-radius:14px;width:90%;max-width:320px;text-align:center;}
+#loginModal input{width:100%;padding:10px;margin:8px 0;border-radius:10px;border:none;background:rgba(255,255,255,0.02);color:var(--white);outline:none;font-size:14px;}
+#loginModal button{width:100%;margin-top:12px;font-size:14px;}
+
+/* Responsive */
+@media (min-width:768px){
+  .hero-left h2{font-size:38px;}
+  .hero-left p{font-size:16px;}
+}
+@media (min-width:1024px){
+  .hero-left h2{font-size:44px;}
+  .hero-left p{font-size:17px;}
+  .product-card{padding:22px;}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+  <div class="brand">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12C3 7.03 7.03 3 12 3s9 4.03 9 9-4.03 9-9 9-9-4.03-9-9z" fill="white" opacity="0.06"/>
+        <path d="M7.5 12.5L10.5 9L14.5 15" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div>
+      <h1>NEXTWIN</h1>
+      <p class="small muted">Next Generation. Next Win. • Made by Sanu Kumar</p>
+    </div>
+  </div>
+  <nav aria-label="Main Navigation">
+    <a class="btn ghost" href="#products">Products</a>
+    <a class="btn ghost" href="#features">Features</a>
+    <a class="btn ghost" href="#about">About</a>
+     <a class="btn ghost" href="kjm.html">About Creator and CEO</a>
+          <a class="btn ghost" href="deepseek_html_20251209_46e12c.html">Neon AI</a>
+    <a class="btn primary" href="/same.html" target="_blank" rel="noopener">Open EduMaster</a>
+
+    <button class="btn ghost" id="logoutBtn">Logout / लॉगआउट</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-left">
+    <span class="kicker">AI · Education</span>
+    <h2>Build smarter learning experiences with <span style="background:linear-gradient(90deg,var(--accent),#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent">NEXTWIN</span></h2>
+    <p class="muted">Products that help students win every next exam — clean notes, AI-powered answers, quizzes, and classroom tools. Start with EduMaster — our Class 10 product.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://edumaster10.netlify.app" target="_blank">Get Started — EduMaster</a>
+      <button class="btn" id="demoBtn">Live Demo</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>10k+</b><small class="muted">Users (beta)</small></div>
+      <div class="stat"><b>100+</b><small class="muted">Notes & PDFs</small></div>
+      <div class="stat"><b>4.9</b><small class="muted">Avg Rating</small></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="product-card">
+      <h3>LearnX AI — Student Companion</h3>
+      <p class="muted small">AI assistant that answers questions, generates notes from PDFs, and helps students revise faster.</p>
+      <div class="mini-grid" style="margin-top:12px">
+        <div class="mini"><strong>Smart Notes</strong><div class="small muted">Auto-summarize PDFs & textbooks</div></div>
+        <div class="mini"><strong>Q&amp;A</strong><div class="small muted">Instant answers + sources</div></div>
+        <div class="mini"><strong>Quiz Maker</strong><div class="small muted">Generate practice tests</div></div>
+        <div class="mini"><strong>Offline Mode</strong><div class="small muted">Read notes anywhere</div></div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:14px">
+        <a class="btn primary" href="#products">Explore</a>
+        <a class="btn ghost" href="#features">See features</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features">
+  <h3>What we build</h3>
+  <div class="features">
+    <div class="feature"><h4>AI Notes & Summaries</h4><p class="muted">Upload PDFs or paste text — get clear, exam oriented notes and memory tricks tailored to Class 10 and more.</p></div>
+    <div class="feature"><h4>Personalized Quizzes</h4><p class="muted">Adaptive quizzes with difficulty levels and instant feedback to help students track progress.</p></div>
+    <div class="feature"><h4>Teacher Tools</h4><p class="muted">Create classroom resources, share PDFs, and track student performance with a few clicks.</p></div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+<h3>Products</h3>
+<div class="products">
+  <div class="product"><div class="thumb">LX</div><div style="flex:1"><strong>Neon AI</strong><div class="small muted">AI tutor & notes generator — class 6 to 12. </div></div></div>
+  <div class="product"><div class="thumb">EM</div><div style="flex:1"><strong>EduMaster — Class 10</strong><div class="small muted">Dedicated Class 10 notes, practice papers and PDF library.</div></div></div>
+  <div class="product"><div class="thumb">WB</div><div style="flex:1"><strong>Workbook Creator</strong><div class="small muted">Generate printable practice workbooks in seconds.</div></div></div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div>© <span id="year"></span> NEXTWIN — Made by Sanu Kumar</div>
+<div class="small muted">Powered by NEXTWIN •</div>
+</footer>
+</div>
+
+<!-- Login Modal -->
+<div id="loginModal">
+  <div class="modal-content">
+    <h3>Login / लॉगिन</h3>
+    <input type="text" id="phone" placeholder="Enter phone / फ़ोन नंबर डालें" />
+    <button id="sendOtpBtn" class="btn primary">Send OTP / OTP भेजें</button>
+    <div id="otpSection" style="display:none;margin-top:12px;">
+      <input type="text" id="otpInput" placeholder="Enter OTP / OTP डालें" />
+      <button id="verifyOtpBtn" class="btn primary">Verify / सत्यापित करें</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Current Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Demo button
+document.getElementById('demoBtn').addEventListener('click', ()=>{window.open('https://edumaster10.netlify.app','_blank');});
+
+// Logout
+document.getElementById('logoutBtn').addEventListener('click', ()=>{
+  if(confirm('Are you sure you want to logout? / क्या आप लॉगआउट करना चाहते हैं?')){
+    localStorage.removeItem('loggedInPhone');
+    location.reload();
+  }
+});
+
+// OTP Login
+const loginModal = document.getElementById('loginModal');
+const phoneInput = document.getElementById('phone');
+const sendOtpBtn = document.getElementById('sendOtpBtn');
+const otpSection = document.getElementById('otpSection');
+const otpInput = document.getElementById('otpInput');
+const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+
+let generatedOtp = '';
+
+function showModal(){ loginModal.style.display='flex'; }
+function hideModal(){ loginModal.style.display='none'; }
+
+if(!localStorage.getItem('loggedInPhone')){ showModal(); }
+
+sendOtpBtn.addEventListener('click', ()=>{
+  const phone = phoneInput.value.trim();
+  if(!phone || phone.length<10){ alert('Enter valid phone / मान्य फोन नंबर डालें'); return; }
+  generatedOtp = Math.floor(100000 + Math.random()*900000).toString();
+  alert('Your OTP: '+generatedOtp); // Real app: send via SMS
+  otpSection.style.display='block';
+});
+
+verifyOtpBtn.addEventListener('click', ()=>{
+  if(otpInput.value.trim() === generatedOtp){
+    localStorage.setItem('loggedInPhone', phoneInput.value.trim());
+    alert('Login successful! / लॉगिन सफल!');
+    hideModal();
+  } else alert('Invalid OTP / गलत OTP!');
+});
+</script>
+</body>
+</html>
